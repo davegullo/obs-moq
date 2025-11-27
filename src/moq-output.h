@@ -2,6 +2,7 @@
 #include <obs-module.h>
 
 #include <string>
+#include "logger.h"
 
 class MoQOutput {
 public:
@@ -18,6 +19,8 @@ public:
 
 private:
 	// TODO: Add needed functions
+	void ConfigureVideoTrack();
+	void ConfigureAudioTrack();
 
 	obs_output_t *output;
 
