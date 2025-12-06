@@ -143,7 +143,7 @@ void MoQOutput::ConfigureVideoTrack()
 		return;
 	}
 
-	LOG_DEBUG("Video encoder settings: %s", obs_data_get_json_pretty_with_defaults(settings));
+	LOG_DEBUG("Video encoder settings: %s", obs_data_get_json_pretty(settings));
 
 	const char *video_codec = obs_encoder_get_codec(encoder);
 	const char *profile = obs_data_get_string(settings, "profile"); // Could be "" 
@@ -170,7 +170,7 @@ void MoQOutput::ConfigureAudioTrack()
 		return;
 	}
 
-	LOG_DEBUG("Audio encoder settings: %s", obs_data_get_json_pretty_with_defaults(settings));
+	LOG_DEBUG("Audio encoder settings: %s", obs_data_get_json_pretty(settings));
 
 	const char *audio_codec = obs_encoder_get_codec(encoder);
 	auto audio_bitrate = (int)obs_data_get_int(settings, "bitrate");
